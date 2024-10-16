@@ -14,14 +14,14 @@ namespace Infraestruture.repository.Repository
             {
                 Email = "Josias@Email.com",
                 Nome = "Josias",
-                Role = "Gerente",
+                Nivel = "Gerente",
                 Senha = "JosiasSenha"
             });
             usuarios.AddLast(new Usuario
             {
                 Email = "Josi@Email.com",
                 Nome = "Josi",
-                Role = "Vendedor",
+                Nivel = "Vendedor",
                 Senha = "JosiSenha"
             });
         }

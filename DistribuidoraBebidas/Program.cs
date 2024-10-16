@@ -1,3 +1,5 @@
+using Domain.Cadastrar;
+using Domain.CadastrarPedido;
 using Domain.Login;
 using Domain.Repository;
 using Domain.Token;
@@ -13,10 +15,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(LoginHandler).Assembly));
-//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(LoginH).Assembly));
-builder.Services.AddScoped<IUsuarioRepository, LocalRepository>();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreatePedidoHandler).Assembly));
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<TokenService>();
-//builder.Services.AddScoped<DBContext>();
+builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
+builder.Services.AddScoped<DBContext>();
 
 
 
