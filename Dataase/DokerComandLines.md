@@ -1,0 +1,1 @@
+docker run --name database -p 5432:5432 -v /tmp/databaseBebidas:/var/lib/postgresql/data -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=databaseBebidas -d postgres
